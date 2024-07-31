@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management System</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="/home/ahmed/Downloads/bootstrap-5.3.2/dist/css/bootstrap.css">
+</head>
+
+<body class="bg-secondary" style="color: black;">
+
+    <h1 class="text-center mt-3 bolder">Product Management System</h1>
+
+    <div class="container">
+        <div class="row container-fluid justify-content-center my-4">
+            <form>
+                <label for="productName" class="form-label">Product Name :</label>
+                <input type="text" id="productName" class="form-control input-group mb-4" placeholder="Ex : Mercedes-Benz E300 2024"/>
+                <label for="productPrice" class="form-label">Product Price :</label>
+                <input type="text" id="productPrice" class="form-control input-group mb-4" placeholder="Ex : 4,375,000"/>
+                <label for="productStatus" class="form-label">Product Status :</label>
+                <input type="text" id="productStatus" class="form-control input-group mb-4" placeholder="Ex : Excellent"/>
+                <label for="productCategory" class="form-label">Product Category :</label>
+                <input type="text" id="productCategory" class="form-control input-group mb-4" placeholder="Ex : Car"/>
+                <div class="my-4 text-center">
+                    <button type="button" class="btn btn-success mx-2" id="addAndUpdateBtn">Add Product</button>
+                    <button type="reset" class="btn btn-warning mx-2" id="clearBtn">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center my-4">
+            <div class="col-md-8">
+                <form class="form-inline">
+                    <input type="text" class="form-control input-group" id="search" placeholder="Search..." oninput="searchProducts(this.value);">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <table class="table" id="table">
+            <thead>
+              <tr class="text-center">
+                <th scope="col">Index</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Status</th>
+                <th scope="col">Category</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="table-secondary" id="tableBody"></tbody>
+        </table>
+        <div class="my-4 text-center">
+            <button type="button" class="btn btn-danger" id="deleteAllBtn">Delete All</button>
+        </div>
+    </div>
+
+    <script src="CRUD.js"></script>
+</body>
+</html>
